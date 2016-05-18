@@ -70,4 +70,19 @@ function notesApplication(author){
 			this.notes.splice(note_id,1);
 		}
 	};
+	
+	this.delete = function(note_id){
+		if(note_id >= 0 && note_id < this.notes.length)
+		{
+			this.notes.splice(note_id,1);
+		}
+	};
+
+
+	this.edit = function(note_id, new_content){
+		if(note_id >= 0 && note_id < this.notes.length)
+		{
+			this.notes[note_id] = new_content;
+		}	
+	};
 };
