@@ -70,3 +70,4 @@ function notesApplication(author){
 			this.notes.splice(note_id,1);
 		}
 	};
+};
