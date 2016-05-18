@@ -1,6 +1,6 @@
 function notesApplication(author){
 	this.author = author;
-	var notes = [];
+	this.notes = [];
 
 	this.create = function(note_content){
 		this.notes.push(note_content);
@@ -14,4 +14,13 @@ function notesApplication(author){
 		}
 	};
 
-	
+	this.get = function(note_id){
+		if(note_id >= 0 && note_id < this.notes.length)
+		{
+			return this.notes[note_id];
+		}
+		else
+		{
+			return "Does not exist!";
+		}
+	}
